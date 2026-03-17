@@ -1,0 +1,75 @@
+site_name: bub
+repo_url: https://github.com/bubbuild/bub
+site_url: https://bub.build
+site_description: "An agent partner for real teams: visible execution, reliable collaboration."
+site_author: Bub Build
+edit_uri: edit/main/docs/
+repo_name: bubbuild/bub
+copyright: Copyright (c) 2026 <a href="https://github.com/bubbuild">Bub Build</a> contributors.
+
+nav:
+  - Home: index.md
+  - Core:
+      - Overview: core/index.md
+      - Architecture: architecture.md
+      - Key Features: features.md
+  - Workflows:
+      - Overview: workflows/index.md
+      - CLI: cli.md
+      - Skills: skills.md
+  - Channels:
+      - Overview: channels/index.md
+      - Telegram: channels/telegram.md
+  - Deployment: deployment.md
+  - Extension Guide: extension-guide.md
+  - Posts:
+      - Overview: posts/index.md
+      - 2025-07-16 Bootstrap Milestone: posts/2025-07-16-baby-bub-bootstrap-milestone.md
+      - 2026-03-01 Socialized Evaluation: posts/2026-03-01-bub-socialized-evaluation-and-agent-partnership.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src/bub"]
+
+theme:
+  name: terminal
+  custom_dir: docs/overrides
+  palette: dark
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/bubbuild/bub
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/bub
